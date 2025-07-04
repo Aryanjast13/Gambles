@@ -13,7 +13,7 @@ const ProtectedRedirect = ({ children }) => {
                 // console.log("Auth check result:", response.data);
 
                 if (response.data.success) {
-                    navigate("/", { replace: true });
+                    navigate("/dashboard", { replace: true });
                 } else {
                     setChecking(false);
                 }

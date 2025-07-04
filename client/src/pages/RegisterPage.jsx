@@ -1,11 +1,13 @@
+import { useUser } from "@/contexts/UserContext.jsx";
 import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import api from "../utils/api.js"
+import api from "../utils/api.js";
 
 export default function RegisterPage() {
+    const {fetchUser}  = useUser()
 
     const navigate = useNavigate()
 
@@ -31,7 +33,8 @@ export default function RegisterPage() {
                 toast.error(response?.data?.message);
             } else {
                 toast.success(response?.data?.message);
-                navigate("/")
+                await fetchUser();
+                navigate("/dashboard")
             }
         } catch (error) {
             console.error("Registration failed:", error);

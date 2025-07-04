@@ -6,6 +6,10 @@ function Navbar({ setIsSidebarOpen, setIsWalletOpen }) {
     const { user } = useUser();
     const navigate = useNavigate();
 
+    if (user === undefined) {
+        return null; // or loading spinner
+      }
+
     return (
         <nav className="flex items-center justify-between bg-[#1A2C38] text-white px-4 py-2 h-[8vh] shadow-md w-full">
             {/* Left: Sidebar toggle + Logo */}

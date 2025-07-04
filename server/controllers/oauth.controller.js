@@ -1,7 +1,7 @@
 import axios from "axios";
 import userModel from "../models/user.model.js";
-import { generateAccessToken, generateRefreshToken } from "../utils/generateJwtTokens.js";
 import { accessCookieOptions, refreshCookieOptions } from "../utils/cookieOptions.js";
+import { generateAccessToken, generateRefreshToken } from "../utils/generateJwtTokens.js";
 
 const FRONTEND_URL = process.env.CLIENT_URL;
 const SERVER_URL = process.env.SERVER_URL;

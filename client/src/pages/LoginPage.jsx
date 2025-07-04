@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import api from "../utils/api.js";
 import { useUser } from "../contexts/UserContext";
+import api from "../utils/api.js";
 
 export default function LoginPage() {
     const navigate = useNavigate();
@@ -33,7 +33,7 @@ export default function LoginPage() {
             const userRes = await api.get("/api/user/my-details", { withCredentials: true });
             setUser(userRes.data.data);
 
-            navigate("/");
+            navigate("/dashboard");
         } catch (error) {
             toast.error(error.response?.data?.message || "Something went wrong");
         }
