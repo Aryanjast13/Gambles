@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "https://your-backend.vercel.app/api/$1"
+        "destination": "https://gambles-483e.vercel.app/api/$1"
       },
       {
         "source": "/(.*)",
