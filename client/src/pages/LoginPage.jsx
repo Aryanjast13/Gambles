@@ -1,7 +1,5 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { FaGithub } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../contexts/UserContext";
 import api from "../utils/api.js";
@@ -116,7 +114,7 @@ export default function LoginPage() {
                     <hr className="flex-1 border-gray-300" />
                 </div>
 
-                <div className="space-y-3">
+                {/* <div className="space-y-3">
                     <button
                         onClick={() =>
                             window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`
@@ -136,7 +134,7 @@ export default function LoginPage() {
                         <FaGithub className="text-xl" />
                         <span>Continue with GitHub</span>
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     );

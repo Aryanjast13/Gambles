@@ -1,8 +1,6 @@
 import { useUser } from "@/contexts/UserContext.jsx";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { FaGithub } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import api from "../utils/api.js";
 
@@ -124,7 +122,7 @@ export default function RegisterPage() {
                     <hr className="flex-1 border-gray-300" />
                 </div>
 
-                <div className="space-y-3">
+                {/* <div className="space-y-3">
                 <button
                         onClick={() => window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`}
                         className="flex items-center justify-center w-full gap-2 border px-4 py-2 rounded-md hover:bg-gray-100 transition"
@@ -140,7 +138,7 @@ export default function RegisterPage() {
                         <FaGithub className="text-xl" />
                         <span>Continue with GitHub</span>
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     );
