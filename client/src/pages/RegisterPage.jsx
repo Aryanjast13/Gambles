@@ -116,11 +116,11 @@ export default function RegisterPage() {
                     </p>
                 </form>
 
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                     <hr className="flex-1 border-gray-300" />
                     <span className="text-sm text-gray-500">or</span>
                     <hr className="flex-1 border-gray-300" />
-                </div>
+                </div> */}
 
                 {/* <div className="space-y-3">
                 <button
